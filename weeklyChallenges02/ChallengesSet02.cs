@@ -8,12 +8,31 @@ namespace weeklyChallenges02
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";
+            if (alphabet.ToLower().Contains(c) || alphabet.ToUpper().Contains(c))
+
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+            int totalElements = vals.Count();
+            int isEven = totalElements % 2;
+            if (totalElements == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool IsNumberEven(int number)
