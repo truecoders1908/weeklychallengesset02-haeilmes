@@ -25,7 +25,7 @@ namespace weeklyChallenges02
         {
             int totalElements = vals.Count();
             int isEven = totalElements % 2;
-            if (totalElements == 0)
+            if (isEven == 0)
             {
                 return true;
             }
@@ -106,17 +106,48 @@ namespace weeklyChallenges02
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            int sum = 0;
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    sum += num;
+                }
+            }
+            return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+            else if (numbers.Sum() % 2 != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            if (number <= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                long num = number / 2;
+                return num;
+            }
         }
     }
 }
